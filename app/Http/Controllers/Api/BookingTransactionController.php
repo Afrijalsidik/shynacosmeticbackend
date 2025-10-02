@@ -72,7 +72,6 @@ class BookingTransactionController extends Controller
 
     }
 
-
     public function booking_details(Request $request)
     {
         $request->validate([
@@ -85,6 +84,7 @@ class BookingTransactionController extends Controller
             ->with([
                 'transactionDetails',
                 'transactionDetails.cosmetic',
+                'transactionDetails.cosmetic.brand',
             ])
             ->first();
 
